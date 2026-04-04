@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash C:/Users/victo/.claude/skills/brainstorming/scripts/start-server.sh --project-dir C:/Resources/React/luvimes)"
+    ]
+  }
+}
