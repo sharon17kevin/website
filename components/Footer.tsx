@@ -52,6 +52,14 @@ export default function Footer() {
 
             <div className="section-container pt-8 text-center text-white/40 text-sm px-4">
                 Luagro © {new Date().getFullYear()}. All rights reserved.
+                {" · "}
+                A project by{" "}
+                <a
+                    href="https://luvimes.com"
+                    className="text-white/60 hover:text-white transition-colors underline underline-offset-2"
+                >
+                    Luvimes
+                </a>
             </div>
         </footer>
     );

@@ -28,9 +28,17 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#4B6F44]/90 backdrop-blur-md text-white py-4">
       <div className="section-container flex items-center justify-between">
-        <Link href="/">
-          <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" />
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/">
+            <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" />
+          </Link>
+          <a
+            href="https://luvimes.com"
+            className="hidden sm:block text-[10px] font-medium text-white/50 hover:text-white/80 transition-colors border border-white/20 px-2 py-0.5 rounded-full"
+          >
+            A Luvimes Project
+          </a>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
