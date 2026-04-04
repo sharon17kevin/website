@@ -12,10 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Luagro",
-  description: "Shopping made easy",
-};
+export const metadata: Metadata = {};
 
 export default function RootLayout({
   children,
