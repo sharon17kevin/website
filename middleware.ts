@@ -3,26 +3,31 @@ import { NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const url = request.nextUrl.clone();
+  const pathname = url.pathname;
 
-  // Local development: use ?site=luagro query param
+  // Skip if already visiting /luvimes/* paths directly
+  if (pathname.startsWith("/luvimes")) {
+    return NextResponse.next();
+  }
+
+  // Local development: default to Luvimes, ?site=luagro for Luagro
   if (hostname.startsWith("localhost") || hostname.startsWith("127.0.0.1")) {
     const site = url.searchParams.get("site");
     if (site === "luagro") {
-      url.pathname = `/(luagro)${url.pathname}`;
-      return NextResponse.rewrite(url);
+      return NextResponse.next();
     }
-    url.pathname = `/(luvimes)${url.pathname}`;
+    // Rewrite to Luvimes pages
+    url.pathname = `/luvimes${pathname}`;
     return NextResponse.rewrite(url);
   }
 
-  // Production: hostname-based routing
+  // Production: luagro subdomain serves root pages directly
   if (hostname.startsWith("luagro.")) {
-    url.pathname = `/(luagro)${url.pathname}`;
-    return NextResponse.rewrite(url);
+    return NextResponse.next();
   }
 
-  // Default: luvimes.com
-  url.pathname = `/(luvimes)${url.pathname}`;
+  // Default (luvimes.com): rewrite to /luvimes/* pages
+  url.pathname = `/luvimes${pathname}`;
   return NextResponse.rewrite(url);
 }
 

@@ -1,10 +1,14 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import { Users, Sprout, ShieldCheck, Globe } from "lucide-react";
 
 export default function AboutPage() {
     return (
-        <div className="bg-[#FDFBF1]">
-            <div className="pt-18">
+        <div className="min-h-screen bg-[#FDFBF1]">
+            <Navbar />
+
+            <main className="pt-18">
                 {/* Modern About Hero */}
                 <section className="relative py-24 md:py-32 overflow-hidden">
                     <div className="section-container relative z-10 grid md:grid-cols-2 gap-16 items-center">
@@ -78,7 +82,9 @@ export default function AboutPage() {
                         <button className="bg-[var(--accent-green)] text-emerald-900 px-12 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform">Get In Touch</button>
                     </div>
                 </section>
-            </div>
+            </main>
+
+            <Footer />
         </div>
     );
 }
