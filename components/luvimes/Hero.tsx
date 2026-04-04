@@ -1,0 +1,28 @@
+import Link from "next/link";
+
+export default function LuvimesHero() {
+  return (
+    <section className="relative py-24 md:py-36 overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#eef4ea] rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#97C93C]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
+
+      <div className="section-container relative z-10 text-center max-w-3xl mx-auto space-y-8">
+        <h1 className="text-5xl md:text-7xl font-bold text-[#3a5a34] leading-tight tracking-tight">
+          Building technology{" "}
+          <span className="text-[#5a8a52]">that matters</span>
+        </h1>
+        <p className="text-xl text-[#1a1a1a]/60 leading-relaxed max-w-2xl mx-auto">
+          We create digital products that solve real problems — connecting
+          people, delivering value, and empowering communities.
+        </p>
+        <Link
+          href="#projects"
+          className="inline-block px-8 py-4 rounded-full font-semibold text-lg bg-[#3a5a34] text-white hover:bg-[#5a8a52] transition-colors"
+        >
+          See Our Work
+        </Link>
+      </div>
+    </section>
+  );
+}
