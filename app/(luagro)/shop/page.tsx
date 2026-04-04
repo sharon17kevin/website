@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import CategoryCard from "@/components/CategoryCard";
 import PromoSlider from "@/components/PromoSlider";
 import ProductCard from "@/components/ProductCard";
@@ -63,10 +61,8 @@ const products = {
 
 export default function ShopPage() {
     return (
-        <div className="min-h-screen bg-[#FDFBF1]">
-            <Navbar />
-
-            <main className="pt-18">
+        <div className="bg-[#FDFBF1]">
+            <div className="pt-18">
                 {/* Redesigned Shop Hero: Text Left, Corn Right */}
                 <section className="relative min-h-[500px] flex items-center bg-emerald-950 overflow-hidden">
                     <div className="section-container grid md:grid-cols-2 gap-12 items-center relative z-10 py-20">
@@ -265,9 +261,7 @@ export default function ShopPage() {
                         <div className="absolute bottom-1/3 right-1/2 w-6 h-6 bg-white rounded-full blur-md opacity-20 animate-pulse" />
                     </div>
                 </section>
-            </main>
-
-            <Footer />
+            </div>
         </div>
     );
 }

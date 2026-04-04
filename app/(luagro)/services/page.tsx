@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Truck, Store, Zap, Package, Headphones, CalendarCheck } from "lucide-react";
 
 const services = [
@@ -43,10 +41,8 @@ const services = [
 
 export default function ServicesPage() {
     return (
-        <div className="min-h-screen bg-white">
-            <Navbar />
-
-            <main className="pt-18">
+        <div className="bg-white">
+            <div className="pt-18">
                 {/* Services Hero */}
                 <section className="bg-[var(--primary-green)] text-white py-24 md:py-32">
                     <div className="section-container text-center space-y-6">
@@ -83,9 +79,7 @@ export default function ServicesPage() {
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -ml-32 -mb-32" />
                     </div>
                 </section>
-            </main>
-
-            <Footer />
+            </div>
         </div>
     );
 }

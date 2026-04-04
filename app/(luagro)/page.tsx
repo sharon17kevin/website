@@ -1,8 +1,6 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CategoryTabs from "@/components/CategoryTabs";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import AdsSlider from "@/components/AdsSlider";
@@ -11,10 +9,8 @@ import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
+    <>
+      <Hero />
         <AdsSlider />
         <CategoryTabs />
 
@@ -77,10 +73,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+      <FAQ />
+    </>
   );
 }
 

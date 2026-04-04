@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock, User } from "lucide-react";
@@ -57,10 +55,8 @@ const posts = [
 
 export default function BlogPage() {
     return (
-        <div className="min-h-screen bg-[#FDFBF1]">
-            <Navbar />
-
-            <main className="pt-18">
+        <div className="bg-[#FDFBF1]">
+            <div className="pt-18">
                 {/* Blog Hero */}
                 <section className="bg-emerald-950 text-white py-24 md:py-32 relative overflow-hidden">
                     <div className="section-container relative z-10 text-center space-y-6">
@@ -122,9 +118,7 @@ export default function BlogPage() {
                         ))}
                     </div>
                 </section>
-            </main>
-
-            <Footer />
+            </div>
         </div>
     );
 }
