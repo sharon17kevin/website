@@ -4,7 +4,8 @@
       "Bash(bash C:/Users/victo/.claude/skills/brainstorming/scripts/start-server.sh --project-dir C:/Resources/React/luvimes)",
       "Bash(ls:*)",
       "Bash(bash C:/Users/victo/.claude/skills/brainstorming/scripts/stop-server.sh C:/Resources/React/luvimes/.superpowers/brainstorm/1563-1775335715)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(npx next:*)"
     ]
   }
 }

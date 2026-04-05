@@ -9,10 +9,10 @@ export default function LuvimesFooter() {
     >
       <div className="section-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 border-b border-white/10 pb-16">
         <div className="space-y-6 text-center sm:text-left">
-          <div className="text-3xl font-bold">Luvimes</div>
+          <div className="text-3xl font-bold" style={{ fontFamily: "var(--font-display)" }}>Luvimes</div>
           <p className="text-white/60 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
-            We build digital products that solve real problems. Technology that
-            connects, delivers, and empowers.
+            Small team, useful software. We build tools for the
+            communities we live in.
           </p>
           <div className="flex justify-center sm:justify-start gap-4">
             <FacebookIcon className="w-6 h-6 hover:text-[#97C93C] transition-colors cursor-pointer" />
@@ -22,7 +22,7 @@ export default function LuvimesFooter() {
         </div>
 
         <div className="text-center sm:text-left">
-          <h4 className="text-xl font-bold mb-6">Navigation</h4>
+          <h4 className="text-xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>Navigation</h4>
           <ul className="space-y-4 text-white/60">
             <li>
               <Link href="/" className="hover:text-white transition-colors">
@@ -49,9 +49,9 @@ export default function LuvimesFooter() {
         </div>
 
         <div className="text-center sm:text-left">
-          <h4 className="text-xl font-bold mb-6">Stay Updated</h4>
+          <h4 className="text-xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>Stay Updated</h4>
           <p className="text-white/60 text-sm mb-4">
-            Get the latest from Luvimes.
+            Get updates from Luvimes.
           </p>
           <div className="flex flex-col gap-2">
             <input

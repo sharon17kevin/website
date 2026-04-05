@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,7 +6,8 @@
   --color-foreground: #1A1A1A;
   --color-primary-green: #4B6F44;
   --color-accent-green: #97C93C;
-  --font-inter: 'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 }
 
 :root {
@@ -15,13 +16,14 @@
   --primary-green: #4B6F44;
   --accent-green: #97C93C;
   --card-bg: #FFFFFF;
-  --font-inter: 'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter);
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   overflow-x: hidden;

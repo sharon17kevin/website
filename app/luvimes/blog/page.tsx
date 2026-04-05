@@ -2,25 +2,25 @@ import { Clock, User } from "lucide-react";
 
 const posts = [
   {
-    title: "Introducing Luagro: Fresh Produce, Delivered",
+    title: "Luagro is live: here's what it does",
     excerpt:
-      "Our first product is live. Learn how Luagro is connecting local farmers directly to households with 60-minute delivery.",
+      "We just launched our first product. Luagro lets you order fresh produce from local farms and get it delivered within the hour.",
     date: "March 15, 2026",
     author: "Luvimes Team",
     category: "Product Launch",
   },
   {
-    title: "Why We Started Luvimes",
+    title: "The backstory behind Luvimes",
     excerpt:
-      "The story behind our company — what drives us to build technology that makes a real difference in people's lives.",
+      "How a frustration with grocery store produce turned into a company. This is the story of why we started building.",
     date: "March 1, 2026",
     author: "Luvimes Team",
     category: "Company",
   },
   {
-    title: "Building for Communities, Not Just Users",
+    title: "Building for your neighbors, not for metrics",
     excerpt:
-      "How we approach product development with a community-first mindset and what that means in practice.",
+      "What it looks like to develop software when the people using it live in your town. Our approach to community-focused product work.",
     date: "February 20, 2026",
     author: "Luvimes Team",
     category: "Engineering",
@@ -36,12 +36,11 @@ export default function LuvimesBlogPage() {
           <div className="inline-block bg-[#eef4ea] text-[#3a5a34] px-4 py-1 rounded-full text-sm font-bold">
             News & Insights
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#3a5a34]">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-[#3a5a34]" style={{ fontFamily: "var(--font-display)" }}>
             The Luvimes Blog
           </h1>
           <p className="text-xl text-[#1a1a1a]/60 max-w-2xl mx-auto">
-            Updates, stories, and insights from our team as we build technology
-            that matters.
+            What we&apos;re thinking about, working on, and learning along the way.
           </p>
         </div>
       </section>
@@ -68,7 +67,7 @@ export default function LuvimesBlogPage() {
                     <User size={14} /> {post.author}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-[#3a5a34] group-hover:text-[#5a8a52] transition-colors">
+                <h3 className="text-xl font-bold text-[#3a5a34] group-hover:text-[#5a8a52] transition-colors" style={{ fontFamily: "var(--font-display)" }}>
                   {post.title}
                 </h3>
                 <p className="text-[#1a1a1a]/60 line-clamp-2">

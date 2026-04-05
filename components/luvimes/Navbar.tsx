@@ -26,7 +26,8 @@ export default function LuvimesNavbar() {
       <div className="section-container flex items-center justify-between">
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tight text-[#3a5a34]"
+          className="text-2xl font-extrabold tracking-tight text-[#3a5a34]"
+          style={{ fontFamily: "var(--font-display)" }}
         >
           LUVIMES
         </Link>

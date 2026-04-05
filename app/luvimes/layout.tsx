@@ -2,8 +2,8 @@ import LuvimesNavbar from "@/components/luvimes/Navbar";
 import LuvimesFooter from "@/components/luvimes/Footer";
 
 export const metadata = {
-  title: "Luvimes — Technology Company",
-  description: "We build digital products that solve real problems",
+  title: "Luvimes | Technology Company",
+  description: "Useful software, built close to the people who need it",
 };
 
 export default function LuvimesLayout({
