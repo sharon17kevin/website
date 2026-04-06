@@ -77,20 +77,20 @@ export default function PromoSlider() {
             {/* Scrollable Container */}
             <div
                 ref={scrollRef}
-                className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
+                className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
             >
                 {promos.map((promo) => (
                     <div
                         key={promo.id}
-                        className={`flex-shrink-0 w-[280px] md:w-[350px] h-[180px] rounded-3xl ${promo.bgColor} p-6 flex items-center justify-between snap-center relative overflow-hidden`}
+                        className={`flex-shrink-0 w-[240px] sm:w-[280px] md:w-[350px] h-[160px] md:h-[180px] rounded-2xl md:rounded-3xl ${promo.bgColor} p-5 md:p-6 flex items-center justify-between snap-center relative overflow-hidden`}
                     >
-                        <div className="z-10 space-y-2">
-                            <h4 className="text-sm font-bold text-gray-600 uppercase tracking-wider">{promo.title}</h4>
-                            <div className="text-2xl md:text-3xl font-black text-[var(--primary-green)]">{promo.discount}</div>
-                            <p className="text-sm text-gray-700">{promo.description}</p>
-                            <button className="mt-2 text-xs font-bold underline text-[var(--primary-green)]">Claim Offer</button>
+                        <div className="z-10 space-y-1.5 md:space-y-2">
+                            <h4 className="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wider">{promo.title}</h4>
+                            <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[var(--primary-green)]" style={{ fontFamily: "var(--font-display)" }}>{promo.discount}</div>
+                            <p className="text-xs md:text-sm text-gray-700">{promo.description}</p>
+                            <button className="mt-1 md:mt-2 text-xs font-bold underline text-[var(--primary-green)]">Claim Offer</button>
                         </div>
-                        <div className="absolute right-[-20px] bottom-[-20px] w-32 h-32 md:w-40 md:h-40 opacity-40">
+                        <div className="absolute right-[-20px] bottom-[-20px] w-28 h-28 md:w-40 md:h-40 opacity-40">
                             <Image
                                 src={promo.image}
                                 alt={promo.title}

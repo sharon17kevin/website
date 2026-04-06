@@ -26,28 +26,28 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-20 bg-white">
+        <section id="faq" className="py-16 md:py-20 bg-white">
             <div className="section-container max-w-3xl">
-                <h2 className="text-4xl font-bold text-[var(--primary-green)] text-center mb-12">Frequently Asked Questions</h2>
-                <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-green)] text-center mb-10 md:mb-12" style={{ fontFamily: "var(--font-display)" }}>Frequently Asked Questions</h2>
+                <div className="space-y-3 md:space-y-4">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="border border-gray-100 rounded-2xl overflow-hidden bg-[#FDFBF1]/30 transition-all hover:bg-[#FDFBF1]/50 shadow-sm"
+                            className="border border-gray-100 rounded-xl md:rounded-2xl overflow-hidden bg-[#FDFBF1]/30 transition-all hover:bg-[#FDFBF1]/50 shadow-sm"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full flex items-center justify-between p-6 text-left"
+                                className="w-full flex items-center justify-between p-5 md:p-6 text-left gap-4"
                             >
-                                <span className="font-bold text-lg text-gray-800">{faq.question}</span>
+                                <span className="font-bold text-base md:text-lg text-gray-800">{faq.question}</span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-[var(--primary-green)] transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                                    className={`w-5 h-5 text-[var(--primary-green)] transition-transform duration-300 shrink-0 ${openIndex === index ? 'rotate-180' : ''}`}
                                 />
                             </button>
                             <div
-                                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 pb-6 px-6' : 'max-h-0 opacity-0'}`}
+                                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 pb-5 md:pb-6 px-5 md:px-6' : 'max-h-0 opacity-0'}`}
                             >
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                                     {faq.answer}
                                 </p>
                             </div>

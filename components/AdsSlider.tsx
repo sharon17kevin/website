@@ -49,7 +49,7 @@ export default function AdsSlider() {
 
     return (
         <section
-            className="relative w-full h-[125px] md:h-[275px] overflow-hidden bg-black"
+            className="relative w-full h-[180px] sm:h-[220px] md:h-[275px] overflow-hidden bg-black"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -59,11 +59,11 @@ export default function AdsSlider() {
                     className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0"
                         }`}
                 >
-                    {/* Background Mesh/Gradient */}
+                    {/* Background Gradient */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${ad.bgColor}`} />
 
-                    {/* Background Media */}
-                    <div className="absolute right-0 top-0 bottom-0 w-full md:w-3/5 opacity-30 md:opacity-100">
+                    {/* Background Image */}
+                    <div className="absolute right-0 top-0 bottom-0 w-full md:w-3/5 opacity-20 md:opacity-100">
                         <Image
                             src={ad.image}
                             alt={ad.title}
@@ -76,13 +76,13 @@ export default function AdsSlider() {
 
                     {/* Content */}
                     <div className="section-container relative h-full flex items-center z-20">
-                        <div className="max-w-2xl space-y-2 md:space-y-4 text-white px-4 md:px-0">
+                        <div className="max-w-2xl space-y-2 md:space-y-4 text-white px-2 md:px-0">
                             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase">
                                 <Sparkles className={`w-3 h-3 ${ad.accentColor.replace('bg-', 'text-')}`} />
                                 Limited Offer
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-black leading-tight tracking-tighter">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
                                 {ad.title} <span className="md:block text-[var(--accent-green)]">{ad.highlight}</span>
                             </h2>
 
@@ -90,10 +90,10 @@ export default function AdsSlider() {
                                 {ad.subtitle}
                             </p>
 
-                            <div className="pt-2">
+                            <div className="pt-1 md:pt-2">
                                 <Link
                                     href="/shop"
-                                    className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 md:px-8 md:py-3 rounded-full text-xs md:text-base font-black hover:scale-105 transition-transform group"
+                                    className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 md:px-8 md:py-3 rounded-full text-xs md:text-base font-extrabold hover:scale-105 transition-transform group"
                                 >
                                     Shop Now
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -102,13 +102,13 @@ export default function AdsSlider() {
                         </div>
                     </div>
 
-                    {/* Floating Decorative Elements */}
+                    {/* Decorative */}
                     <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 bg-white/5 rounded-full blur-[60px] md:blur-[100px] animate-pulse" />
                 </div>
             ))}
 
             {/* Navigation Indicators */}
-            <div className="absolute bottom-4 right-10 flex gap-2 z-30">
+            <div className="absolute bottom-3 md:bottom-4 right-6 md:right-10 flex gap-2 z-30">
                 {ads.map((_, index) => (
                     <button
                         key={index}
@@ -121,7 +121,7 @@ export default function AdsSlider() {
                 ))}
             </div>
 
-            {/* Side Count (simplified for smaller height) */}
+            {/* Side Count */}
             <div className="hidden lg:flex absolute inset-y-0 left-6 items-center z-30">
                 <div className="flex flex-col gap-2 text-white/40 text-[10px] font-bold tracking-widest vertical-text uppercase">
                     {currentSlide + 1} / {ads.length}

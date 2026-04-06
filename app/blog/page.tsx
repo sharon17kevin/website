@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, Clock, User } from "lucide-react";
 
 const posts = [
@@ -62,29 +61,29 @@ export default function BlogPage() {
 
             <main className="pt-18">
                 {/* Blog Hero */}
-                <section className="bg-emerald-950 text-white py-24 md:py-32 relative overflow-hidden">
-                    <div className="section-container relative z-10 text-center space-y-6">
+                <section className="bg-emerald-950 text-white py-20 md:py-32 relative overflow-hidden">
+                    <div className="section-container relative z-10 text-center space-y-4 md:space-y-6">
                         <div className="inline-block bg-[var(--accent-green)] text-emerald-950 px-4 py-1 rounded-full text-sm font-bold">Insights & Stories</div>
-                        <h1 className="text-5xl md:text-7xl font-black">The <span className="text-[var(--accent-green)]">Luagro</span> Blog</h1>
-                        <p className="text-xl opacity-60 max-w-2xl mx-auto">Exploring the world of sustainable farming, healthy living, and the stories behind your food.</p>
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold" style={{ fontFamily: "var(--font-display)" }}>The <span className="text-[var(--accent-green)]">Luagro</span> Blog</h1>
+                        <p className="text-lg md:text-xl opacity-60 max-w-2xl mx-auto">Exploring the world of sustainable farming, healthy living, and the stories behind your food.</p>
                     </div>
                 </section>
 
                 {/* Popular Post / Featured */}
-                <section className="section-container -mt-16 relative z-20 pb-20">
-                    <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-2xl border border-gray-100 grid md:grid-cols-2 gap-12 items-center">
-                        <div className="relative h-[300px] md:h-[400px] rounded-[30px] overflow-hidden">
+                <section className="section-container -mt-10 md:-mt-16 relative z-20 pb-16 md:pb-20">
+                    <div className="bg-white rounded-[24px] md:rounded-[40px] p-6 sm:p-8 md:p-12 shadow-2xl border border-gray-100 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                        <div className="relative h-[220px] sm:h-[300px] md:h-[400px] rounded-[20px] md:rounded-[30px] overflow-hidden">
                             <Image src="/images/vegetables.jpg" alt="Featured Post" fill className="object-cover" />
                         </div>
-                        <div className="space-y-6">
-                            <div className="text-[var(--accent-green)] font-bold uppercase tracking-widest text-sm">Featured Post</div>
-                            <h2 className="text-4xl font-bold text-[var(--primary-green)] leading-tight">Mastering the Art of Fresh Food Preservation</h2>
-                            <p className="text-gray-500 text-lg">Detailed guide on how to keep your farm-fresh produce tasting great for longer using simple 2026 techniques.</p>
-                            <div className="flex items-center gap-6 text-sm text-gray-400">
+                        <div className="space-y-4 md:space-y-6">
+                            <div className="text-[var(--accent-green)] font-bold uppercase tracking-widest text-xs md:text-sm">Featured Post</div>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--primary-green)] leading-tight" style={{ fontFamily: "var(--font-display)" }}>Mastering the Art of Fresh Food Preservation</h2>
+                            <p className="text-gray-500 text-base md:text-lg">Detailed guide on how to keep your farm-fresh produce tasting great for longer using simple 2026 techniques.</p>
+                            <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-400">
                                 <span className="flex items-center gap-2"><User size={16} /> By Dr. Green</span>
                                 <span className="flex items-center gap-2"><Clock size={16} /> 8 min read</span>
                             </div>
-                            <button className="flex items-center gap-2 font-bold text-[var(--primary-green)] hover:text-[var(--accent-green)] transition-colors">
+                            <button className="flex items-center gap-2 font-bold text-[var(--primary-green)] hover:text-[var(--accent-green)] transition-colors text-sm md:text-base">
                                 READ STORY <ArrowRight size={20} />
                             </button>
                         </div>
@@ -92,28 +91,28 @@ export default function BlogPage() {
                 </section>
 
                 {/* Blog Grid */}
-                <section className="section-container pb-24">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <section className="section-container pb-20 md:pb-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
                         {posts.map((post, idx) => (
                             <div key={idx} className="group cursor-pointer">
-                                <div className="relative h-64 rounded-[30px] overflow-hidden mb-6 shadow-lg">
+                                <div className="relative h-48 sm:h-56 md:h-64 rounded-[20px] md:rounded-[30px] overflow-hidden mb-4 md:mb-6 shadow-lg">
                                     <Image
                                         src={post.image}
                                         alt={post.title}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
-                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold text-[var(--primary-green)]">
+                                    <div className="absolute top-3 md:top-4 left-3 md:left-4 bg-white/90 backdrop-blur-md px-3 md:px-4 py-1 rounded-full text-[10px] md:text-xs font-bold text-[var(--primary-green)]">
                                         {post.category}
                                     </div>
                                 </div>
-                                <div className="space-y-3">
-                                    <div className="text-sm text-gray-400 flex items-center justify-between">
+                                <div className="space-y-2 md:space-y-3">
+                                    <div className="text-xs md:text-sm text-gray-400 flex items-center justify-between">
                                         <span>{post.date}</span>
                                         <span className="flex items-center gap-1"><User size={14} /> {post.author}</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-[var(--primary-green)] group-hover:text-[var(--accent-green)] transition-colors">{post.title}</h3>
-                                    <p className="text-gray-500 line-clamp-2">{post.excerpt}</p>
+                                    <h3 className="text-xl md:text-2xl font-bold text-[var(--primary-green)] group-hover:text-[var(--accent-green)] transition-colors" style={{ fontFamily: "var(--font-display)" }}>{post.title}</h3>
+                                    <p className="text-gray-500 text-sm md:text-base line-clamp-2">{post.excerpt}</p>
                                     <button className="flex items-center gap-2 text-sm font-bold text-[var(--primary-green)] underline underline-offset-4 decoration-2 decoration-[var(--accent-green)]">
                                         Read More
                                     </button>
